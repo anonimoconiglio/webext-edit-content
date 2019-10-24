@@ -1,13 +1,13 @@
-browser.contextMenus.create({
+chrome.contextMenus.create({
 	id: "edit-page",
+	contexts: ['page', 'editable'],
 	title: "Edit the content [ON / OFF]"
 });
 
-browser.contextMenus.onClicked.addListener(function (info, tab) {
+chrome.contextMenus.onClicked.addListener(function (info, tab) {
 	if (info.menuItemId == "edit-page") {
-		browser.tabs.executeScript({
+		chrome.tabs.executeScript({
 			file: "editContent.js"
 		});
 	}
 });
-
