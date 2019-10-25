@@ -8,6 +8,3 @@ if (document.body.contentEditable === 'true') {
 	console.log('Content is editable. Select the option again to revert its condition. \nRefresh the browser to revert changes.');
 	alert('Content is now editable. \nSelect the option again to revert its condition. \nRefresh the browser to reverse changes.');
 }
-
-
-
